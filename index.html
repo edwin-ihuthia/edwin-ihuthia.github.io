@@ -2,46 +2,100 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Edwin Ihuthia – Systems & Databases</title>
+  <title>Edwin Ihuthia – Systems & Databases Developer</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <style>
+    :root {
+      --primary: #0f172a;
+      --accent: #2563eb;
+      --bg: #f8fafc;
+      --card: #ffffff;
+      --text: #1f2933;
+      --muted: #6b7280;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
     body {
-      font-family: Arial, Helvetica, sans-serif;
       margin: 0;
-      background: #f4f6f8;
-      color: #222;
-      line-height: 1.6;
+      font-family: "Segoe UI", Roboto, Arial, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.7;
     }
+
     header {
-      background: #0f172a;
+      background: linear-gradient(135deg, var(--primary), #020617);
       color: white;
-      padding: 40px 20px;
+      padding: 70px 20px;
       text-align: center;
     }
-    section {
-      max-width: 900px;
+
+    header h1 {
+      margin: 0;
+      font-size: 2.5rem;
+      letter-spacing: 1px;
+    }
+
+    header p {
+      margin: 8px 0;
+      font-size: 1.1rem;
+      color: #cbd5f5;
+    }
+
+    main {
+      max-width: 1000px;
       margin: auto;
-      padding: 30px 20px;
+      padding: 40px 20px;
     }
-    h2 {
-      color: #0f172a;
-      margin-bottom: 10px;
-    }
+
     .card {
-      background: white;
-      padding: 20px;
-      border-radius: 8px;
-      margin-bottom: 20px;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+      background: var(--card);
+      padding: 25px;
+      border-radius: 12px;
+      margin-bottom: 30px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.07);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
     }
+
+    .card:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+    }
+
+    h2 {
+      margin-top: 0;
+      color: var(--primary);
+      border-left: 4px solid var(--accent);
+      padding-left: 10px;
+    }
+
+    ul {
+      padding-left: 20px;
+    }
+
+    li {
+      margin-bottom: 8px;
+    }
+
+    a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+
     footer {
-      background: #e5e7eb;
       text-align: center;
-      padding: 20px;
+      padding: 25px;
       font-size: 14px;
+      color: var(--muted);
+      background: #e5e7eb;
     }
   </style>
 </head>
+
 <body>
 
 <header>
@@ -50,24 +104,32 @@
   <p>Naivasha, Nakuru County – Kenya</p>
 </header>
 
-<section>
+<main>
+
   <div class="card">
     <h2>About Me</h2>
     <p>
       I am a systems and databases developer focused on building practical,
-      reliable solutions for local businesses. I specialize in Microsoft Access
-      database systems that simplify record keeping, production tracking,
-      and daily operations.
+      reliable, and easy-to-use solutions for local businesses. My work centers
+      on simplifying daily operations through well-structured systems that are
+      stable, understandable, and effective.
+    </p>
+    <p>
+      I specialize in Microsoft Access database systems for record keeping,
+      production tracking, and operational management. In addition, I have
+      hands-on experience working with ESP32 modules, allowing me to integrate
+      basic embedded systems and hardware-driven data workflows where needed.
     </p>
   </div>
 
   <div class="card">
     <h2>Services</h2>
     <ul>
-      <li>Microsoft Access Database Systems</li>
-      <li>Business Record Automation</li>
-      <li>Production & Inventory Tracking</li>
-      <li>Local Business System Support</li>
+      <li>Microsoft Access Database System Design</li>
+      <li>Business Record & Workflow Automation</li>
+      <li>Production and Inventory Tracking Systems</li>
+      <li>Embedded Systems Prototyping (ESP32)</li>
+      <li>Local Business System Support & Maintenance</li>
     </ul>
   </div>
 
@@ -75,22 +137,27 @@
     <h2>Current Project</h2>
     <p>
       <strong>Local Bakery Production System</strong><br>
-      A custom Microsoft Access system for managing recipes,
-      daily production batches, and operational records.
+      A custom Microsoft Access-based system designed to manage recipes,
+      daily production batches, and operational records for a local bakery.
+      The system replaces manual record keeping with a structured,
+      reliable digital workflow.
     </p>
   </div>
 
   <div class="card">
     <h2>Contact</h2>
     <p>
-      📧 Email: <a href="mailto:edwin.ihuthia.systems@gmail.com">
-      edwin.ihuthia.systems@gmail.com</a>
+      📧 Email:
+      <a href="mailto:edwin.ihuthia.systems@gmail.com">
+        edwin.ihuthia.systems@gmail.com
+      </a>
     </p>
     <p>
       📍 Location: Naivasha, Nakuru County – Kenya
     </p>
   </div>
-</section>
+
+</main>
 
 <footer>
   © 2026 Edwin Ihuthia – Systems & Databases
@@ -98,3 +165,4 @@
 
 </body>
 </html>
+
