@@ -1,168 +1,165 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Edwin Ihuthia – Systems & Databases Developer</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <style>
-    :root {
-      --primary: #0f172a;
-      --accent: #2563eb;
-      --bg: #f8fafc;
-      --card: #ffffff;
-      --text: #1f2933;
-      --muted: #6b7280;
-    }
-
-    * {
-      box-sizing: border-box;
-    }
-
-    body {
-      margin: 0;
-      font-family: "Segoe UI", Roboto, Arial, sans-serif;
-      background: var(--bg);
-      color: var(--text);
-      line-height: 1.7;
-    }
-
-    header {
-      background: linear-gradient(135deg, var(--primary), #020617);
-      color: white;
-      padding: 70px 20px;
-      text-align: center;
-    }
-
-    header h1 {
-      margin: 0;
-      font-size: 2.5rem;
-      letter-spacing: 1px;
-    }
-
-    header p {
-      margin: 8px 0;
-      font-size: 1.1rem;
-      color: #cbd5f5;
-    }
-
-    main {
-      max-width: 1000px;
-      margin: auto;
-      padding: 40px 20px;
-    }
-
-    .card {
-      background: var(--card);
-      padding: 25px;
-      border-radius: 12px;
-      margin-bottom: 30px;
-      box-shadow: 0 10px 25px rgba(0,0,0,0.07);
-      transition: transform 0.2s ease, box-shadow 0.2s ease;
-    }
-
-    .card:hover {
-      transform: translateY(-3px);
-      box-shadow: 0 15px 35px rgba(0,0,0,0.1);
-    }
-
-    h2 {
-      margin-top: 0;
-      color: var(--primary);
-      border-left: 4px solid var(--accent);
-      padding-left: 10px;
-    }
-
-    ul {
-      padding-left: 20px;
-    }
-
-    li {
-      margin-bottom: 8px;
-    }
-
-    a {
-      color: var(--accent);
-      text-decoration: none;
-    }
-
-    footer {
-      text-align: center;
-      padding: 25px;
-      font-size: 14px;
-      color: var(--muted);
-      background: #e5e7eb;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edwin Ihuthia - Systems & Databases Developer</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, rgba(245,247,250,0.8) 0%, rgba(195,207,226,0.8) 100%), url('https://images.unsplash.com/photo-1518709268805-4e9042af2176?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80');
+            background-size: cover;
+            background-attachment: fixed;
+            background-position: center;
+            color: #333;
+            line-height: 1.6;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        header {
+            text-align: center;
+            padding: 50px 0;
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 10px;
+            margin-bottom: 30px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            animation: fadeIn 1s ease-in;
+        }
+        header h1 {
+            font-family: 'Poppins', sans-serif;
+            font-size: 3em;
+            margin: 0;
+            color: #2c3e50;
+        }
+        header h2 {
+            font-size: 1.5em;
+            color: #3498db;
+            margin: 10px 0;
+        }
+        header p {
+            font-size: 1.2em;
+            color: #7f8c8d;
+        }
+        section {
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 10px;
+            padding: 30px;
+            margin-bottom: 30px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            animation: slideUp 1s ease-out;
+        }
+        section h2 {
+            font-family: 'Poppins', sans-serif;
+            color: #2c3e50;
+            border-bottom: 2px solid #3498db;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+        }
+        .services {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+        .service-item {
+            flex: 1 1 300px;
+            background: #ecf0f1;
+            padding: 20px;
+            border-radius: 8px;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .service-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+        .contact {
+            text-align: center;
+        }
+        .contact p {
+            font-size: 1.2em;
+            margin: 10px 0;
+        }
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: #2c3e50;
+            color: white;
+            border-radius: 10px 10px 0 0;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        @keyframes slideUp {
+            from { transform: translateY(20px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+        @media (max-width: 768px) {
+            header h1 { font-size: 2em; }
+            .services { flex-direction: column; }
+        }
+    </style>
 </head>
-
 <body>
+    <div class="container">
+        <header>
+            <h1>Edwin Ihuthia</h1>
+            <h2>Systems & Databases Developer</h2>
+            <p>Naivasha, Nakuru County – Kenya</p>
+        </header>
 
-<header>
-  <h1>Edwin Ihuthia</h1>
-  <p>Systems & Databases Developer</p>
-  <p>Naivasha, Nakuru County – Kenya</p>
-</header>
+        <section id="about">
+            <h2>About Me</h2>
+            <p>I am a systems and databases developer focused on building practical, reliable, and easy-to-use solutions for local businesses. My work centers on simplifying daily operations through well-structured systems that are stable, understandable, and effective.</p>
+            <p>I specialize in Microsoft Access database systems for record keeping, production tracking, and operational management. In addition, I have hands-on experience working with ESP32 modules, allowing me to integrate basic embedded systems and hardware-driven data workflows where needed.</p>
+        </section>
 
-<main>
+        <section id="services">
+            <h2>Services</h2>
+            <div class="services">
+                <div class="service-item">
+                    <h3>Microsoft Access Database System Design</h3>
+                    <p>Custom database solutions tailored for efficient data management.</p>
+                </div>
+                <div class="service-item">
+                    <h3>Business Record & Workflow Automation</h3>
+                    <p>Automate repetitive tasks to streamline business processes.</p>
+                </div>
+                <div class="service-item">
+                    <h3>Production and Inventory Tracking Systems</h3>
+                    <p>Real-time tracking for production and inventory to optimize operations.</p>
+                </div>
+                <div class="service-item">
+                    <h3>Embedded Systems Prototyping (ESP32)</h3>
+                    <p>Prototype hardware-integrated systems for data workflows.</p>
+                </div>
+                <div class="service-item">
+                    <h3>Local Business System Support & Maintenance</h3>
+                    <p>Ongoing support to keep your systems running smoothly.</p>
+                </div>
+            </div>
+        </section>
 
-  <div class="card">
-    <h2>About Me</h2>
-    <p>
-      I am a systems and databases developer focused on building practical,
-      reliable, and easy-to-use solutions for local businesses. My work centers
-      on simplifying daily operations through well-structured systems that are
-      stable, understandable, and effective.
-    </p>
-    <p>
-      I specialize in Microsoft Access database systems for record keeping,
-      production tracking, and operational management. In addition, I have
-      hands-on experience working with ESP32 modules, allowing me to integrate
-      basic embedded systems and hardware-driven data workflows where needed.
-    </p>
-  </div>
+        <section id="project">
+            <h2>Current Project</h2>
+            <h3>Local Bakery Production System</h3>
+            <p>A custom Microsoft Access-based system designed to manage recipes, daily production batches, and operational records for a local bakery. The system replaces manual record keeping with a structured, reliable digital workflow.</p>
+        </section>
 
-  <div class="card">
-    <h2>Services</h2>
-    <ul>
-      <li>Microsoft Access Database System Design</li>
-      <li>Business Record & Workflow Automation</li>
-      <li>Production and Inventory Tracking Systems</li>
-      <li>Embedded Systems Prototyping (ESP32)</li>
-      <li>Local Business System Support & Maintenance</li>
-    </ul>
-  </div>
+        <section id="contact" class="contact">
+            <h2>Contact</h2>
+            <p>📧 Email: <a href="mailto:edwin.ihuthia.systems@gmail.com" style="color: #3498db;">edwin.ihuthia.systems@gmail.com</a></p>
+            <p>📍 Location: Naivasha, Nakuru County – Kenya</p>
+        </section>
 
-  <div class="card">
-    <h2>Current Project</h2>
-    <p>
-      <strong>Local Bakery Production System</strong><br>
-      A custom Microsoft Access-based system designed to manage recipes,
-      daily production batches, and operational records for a local bakery.
-      The system replaces manual record keeping with a structured,
-      reliable digital workflow.
-    </p>
-  </div>
-
-  <div class="card">
-    <h2>Contact</h2>
-    <p>
-      📧 Email:
-      <a href="mailto:edwin.ihuthia.systems@gmail.com">
-        edwin.ihuthia.systems@gmail.com
-      </a>
-    </p>
-    <p>
-      📍 Location: Naivasha, Nakuru County – Kenya
-    </p>
-  </div>
-
-</main>
-
-<footer>
-  © 2026 Edwin Ihuthia – Systems & Databases
-</footer>
-
+        <footer>
+            <p>&copy; 2026 Edwin Ihuthia – Systems & Databases</p>
+        </footer>
+    </div>
 </body>
 </html>
-
